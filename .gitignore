@@ -1,3 +1,5 @@
 .history
 /data
 .env
+# 피클 파일 용량 문제로 push 제외
+*.pkl
