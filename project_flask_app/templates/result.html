@@ -4,9 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>음악 장르 추천 결과</title>
+    <!-- Bootstrap 적용 -->
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Result 페이지 CSS -->
+    <link rel="stylesheet" href="../static/css/result.css" />
   </head>
   <body>
-    <p>가장 어울리는 장르는 {{ genre_name }}입니다</p>
+    <p class="result">오늘은 {{ genre_name }} 장르의 음악을 들어보시는건 어떨까요?</p>
+    <a class="btn btn-primary returnbtn" href="/" role="button">돌아가기</a>
   </body>
 </html>
