@@ -53,7 +53,7 @@ def scraping(url):
 
     # 각 list result dictionary에 담기
     result['song_names'] = song_names_list
-    result['artist_names'] = song_names_list
+    result['artist_names'] = artist_names_list
     result['album_names'] = album_names_list
 
     return result
