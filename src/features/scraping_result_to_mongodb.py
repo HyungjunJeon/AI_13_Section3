@@ -1,4 +1,4 @@
-import scraping_melon_playlist as scraping
+from src.features.scraping_melon_playlist import scraping
 import os
 from pymongo import MongoClient
 from dotenv import load_dotenv
@@ -22,7 +22,7 @@ def save_mongodb(url):
 
     collection.delete_many({}) # 중복 실행시 데이터 누적 방지
 
-    result = scraping.scraping(url)
+    result = scraping(url)
 
     for i in range(len(result['song_names'])):
         collection.insert_one({
