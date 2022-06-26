@@ -15,3 +15,8 @@
   font-size: 20px;
   font-weight: bold;
 }
+
+#metabase {
+  width: 90%;
+  margin: 20px auto;
+}
