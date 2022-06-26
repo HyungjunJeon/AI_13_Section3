@@ -21,7 +21,7 @@ def scraping(url):
 
     resp = requests.get(url,headers={"User-Agent":"Mozilla/5.0"}) # Melon Playlist는 headers 값이 없으면 제대로 받아오지 못한다
 
-    service = Service('./chromedriver/chromedriver.exe')
+    service = Service('./chromedriver/chromedriver')
     driver = webdriver.Chrome(service=service)
     driver.implicitly_wait(3)
  
