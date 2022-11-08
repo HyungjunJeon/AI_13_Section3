@@ -1,19 +1,40 @@
-# 음악 장르 추천 서비스 개발 프로젝트
+# AI_13_Section3
 
-코드스테이츠 AI 부트캠프 Section3 프로젝트입니다
+---
 
-## 프로젝트 소개
+## 코드스테이츠 Section3 프로젝트
 
-Melon Playlist 공유링크를 입력받아 Playlist의 앨범명, 곡명, 아티스트 명 데이터를 가져와 이를 기반으로 음악 장르를 추천해주는 서비스입니다   
-Kakao가 제공한 Melon Playlist 데이터와 RandomForest 모델을 활용하였습니다
+### 사용자의 Melon Playlist 및 Melon Playlist 데이터를 통한 음악 장르 추천 서비스
 
-## 서비스 예시 화면
-<img width="1860" alt="main_page" src="https://user-images.githubusercontent.com/65811799/175872486-dd54367a-731a-4afe-a46c-0dae4152f0d2.png">
-<img width="2950" alt="result_page" src="https://user-images.githubusercontent.com/65811799/175872550-0d2000db-220c-47ff-b460-28ecd4f09019.png">
+### Crawling
 
-## 사용 기술
-- JSON, CSV
-- MongoDB, MySQL, SQLite
-- Flask
-- Random Forest 모델, Pickle
-- Selenium, BeautifulSoup
+#### 메인 페이지에서 결과 페이지로 넘어가는 과정에 동작해서 사용자 Melon Playlist 데이터 수집
+
+### DB (MySQL, MongoDB, SQLite3)
+
+#### src/features에 DB 관련 코드가 작성되어 있음
+
+#### NOSQL과 SQL 모두 활용해보기 위해 MongoDB에 적재 후 MySQL에도 적재
+
+#### SQLite3는 Metabase 연동을 위해 활용
+
+### Modeling
+
+#### Recommend => Randomforest 를 사용해 음악 장르 추천
+
+
+### Flask(WAS)
+
+#### - HTML, CSS, Views.py 별도 분리 작성
+
+#### - DB와 연동
+
+
+# 동작 예시
+![음악 장르 추천 서비스 시연](https://user-images.githubusercontent.com/65811799/200488131-6ad33df1-07a1-4718-9f2c-4e12e9a5abe3.gif)
+
+# Web 소개
+
+### 1. Main : Melon Playlist 공유 링크 입력
+
+### 2. Result : 입력받은 Melon Playlist에서 데이터 수집 후 ML모델을 통해 음악 장르 추천 + DashBoard 확인 가능
